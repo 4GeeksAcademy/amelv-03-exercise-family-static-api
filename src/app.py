@@ -73,10 +73,8 @@ def create_member():
 def delete_member(member_id):
     jackson_family.delete_member(member_id)
 
-    response = {
-        "done": True
-    }
-    return jsonify(response)
+    response = {"done": True}
+    return jsonify(response), 200
 
 # this only runs if `$ python src/app.py` is executed
 if __name__ == '__main__':
